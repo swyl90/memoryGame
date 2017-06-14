@@ -1,0 +1,40 @@
+doctype html
+html
+	head
+		style
+			include ../public/css/stylesheet.css
+		script
+			include ../public/js/main.js
+		
+		title Animal
+	body
+		h1 Animal Game
+			img(class='animals', src='../img/animals.png')
+			img(class='hide', src='../img/test.png')
+
+			div(class='test')
+				form(class='animal' action='/animal', method='post', autocomplete='off')
+					fieldset
+						legend Which five animals did you see? Fill in the blanks. 
+						input(type='text', name='answer')
+						br
+						input(type='submit', value='Check your answers')
+
+			div(class='test')
+				form(class='animal' action='/animal', method='post', autocomplete='off')
+					fieldset
+						legend Which five animals did you see? Fill in the blanks. 
+						input(type='text', name='answer')
+						br
+						input(type='text', name='answer')
+						br
+						input(type='text', name='answer')
+						br
+						input(type='text', name='answer')
+						br
+						input(type='text', name='answer')
+						br
+						input(type='submit', value='Check your answers')
+
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+
