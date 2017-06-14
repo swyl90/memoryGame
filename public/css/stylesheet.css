@@ -1,4 +1,12 @@
-.animals {
+h2, p, h4 {
+	text-align: center;
+}
+
+label {
+	font-size: 18px
+}
+
+.animals, .food {
 	width: 90%;
 	margin: 3%;
 }
@@ -6,4 +14,49 @@
 .hide {
 	width: 90%;
 	margin: 3%;
+}
+
+.buttons {
+	padding: auto;
+	text-align: center;
+}
+
+.button {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 15px 25px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #3366cc;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 6px 6px 5px #bab3b3
+}
+
+.button:hover {
+	background-color: #1792ee
+}
+
+.button:active {
+	background-color: #1792ee;
+	box-shadow: 0 4px #b2caf4;
+	transform: translateY(4px);
+}
+
+#buttonOne {
+	float: left;
+	margin: 25px 50px 75px 450px
+}
+
+#buttonTwo {
+	float: right;
+	margin: 25px 450px 75px 50px
+}
+
+#checkbox {
+	margin-right: 15px;
 }
