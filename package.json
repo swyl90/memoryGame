@@ -1,25 +1,25 @@
 {
-  "name": "blog_application",
+  "name": "memoryapp",
   "version": "1.0.0",
-  "description": "simple blogging application homework",
+  "description": "simple game for trainig memory",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "\u0016github.com/skirsimae/Blog-Application"
+    "url": "git+https://github.com/skirsimae/memoryGame.git"
   },
-  "keywords": [
-    "sequelize",
-    "node"
-  ],
-  "author": "Silva",
+  "author": "Silva Kirsimae, Stephanie Lam",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skirsimae/memoryGame/issues"
+  },
+  "homepage": "https://github.com/skirsimae/memoryGame#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "pg": "^6.2.3",
-    "pug": "^2.0.0-rc.1",
-    "sequelize": "^3.30.4"
+    "pg": "^6.2.4",
+    "pug": "^2.0.0-rc.2",
   }
 }
