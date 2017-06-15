@@ -5,7 +5,11 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public/css'));
 app.use(express.static('./public/img'));
- 
+
+app.use(bodyParser.urlencoded({extended: true}));
+
+var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/memorygame';
+
  app.set('views', './views');
  app.set('view engine', 'pug');
  
@@ -23,17 +27,33 @@ app.use(express.static('./public/img'));
       name: Sequelize.STRING
   });
  
- 
-db.sync().then(function() {
+db.sync({force:true}).then(function() {
     Food.bulkCreate([
-        {name: 'pizza'}, {name: 'egg'}, {name: 'chocolate'}, {name:'bread'}, {name:'apple'}
+        {name: 'apple'}, 
+        {name: 'bread'}, 
+        {name: 'egg'}, 
+        {name:'chocolate'}, 
+        {name:'pizza'}
       ]);
 
     Animal.bulkCreate([
-        {name: 'sheep'}, {name:'rabbit'}, {name: 'dog'}, {name: 'chicken'}, {name: 'cow'}
+        {name: 'chicken'}, 
+        {name:'cow'}, 
+        {name: 'dog'}, 
+        {name: 'rabbit'}, 
+        {name: 'sheep'}
       ]);  
   })
  
+const AnswerA = db.define('answera', {
+  answer1: Sequelize.STRING,
+  answer2: Sequelize.STRING,
+  answer3: Sequelize.STRING,
+  answer4: Sequelize.STRING,
+  answer5: Sequelize.STRING
+});
+ 
+
  
 //Weclome page
 app.get('/', function(req,res) { 
@@ -42,14 +62,29 @@ app.get('/', function(req,res) {
 
 
 //Game 1 page
+
 app.get('/animal', function(req,res) {
     res.render('animal')
 })
+
+app.post('/animal', function(req, res) {
+
+})
+
+
+
 
 
 //Game 2 page
 app.get('/food', function(req,res) {
     res.render('food')
+})
+
+
+// score
+app.get('/score', function(req, res) {
+	res.render('score')
+
 })
  
 const server = app.listen(8080, () => {
