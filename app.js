@@ -27,17 +27,33 @@ var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process
       name: Sequelize.STRING
   });
  
- 
-db.sync().then(function() {
+db.sync({force:true}).then(function() {
     Food.bulkCreate([
-        {name: 'pizza'}, {name: 'egg'}, {name: 'chocolate'}, {name:'bread'}, {name:'apple'}
+        {name: 'apple'}, 
+        {name: 'bread'}, 
+        {name: 'egg'}, 
+        {name:'chocolate'}, 
+        {name:'pizza'}
       ]);
 
     Animal.bulkCreate([
-        {name: 'sheep'}, {name:'rabbit'}, {name: 'dog'}, {name: 'chicken'}, {name: 'cow'}
+        {name: 'chicken'}, 
+        {name:'cow'}, 
+        {name: 'dog'}, 
+        {name: 'rabbit'}, 
+        {name: 'sheep'}
       ]);  
   })
  
+const AnswerA = db.define('answera', {
+  answer1: Sequelize.STRING,
+  answer2: Sequelize.STRING,
+  answer3: Sequelize.STRING,
+  answer4: Sequelize.STRING,
+  answer5: Sequelize.STRING
+});
+ 
+
  
 //Weclome page
 app.get('/', function(req,res) { 
@@ -51,14 +67,24 @@ app.get('/animal', function(req,res) {
     res.render('animal')
 })
 
-/*app.post('/gameone', function(req, res) {
-	
-})*/
+app.post('/animal', function(req, res) {
+
+})
+
+
+
 
 
 //Game 2 page
 app.get('/food', function(req,res) {
     res.render('food')
+})
+
+
+// score
+app.get('/score', function(req, res) {
+	res.render('score')
+
 })
  
 const server = app.listen(8080, () => {
