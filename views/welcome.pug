@@ -1,19 +1,24 @@
 doctype html
 html
 	head
+		style
+			include ../public/css/stylesheet.css
 		title Memory Game
 	body
-		h2 Welcome to the Memory Game!
-		h3 This game tests your ability to memorize a set of objects on a picture in 20 seconds. After the time is up, you need to name the objects that you saw. The more you got right, the higher the score!
 		br
-		h4 Please select the game.
-		form(action='/' method )
-			input(type='button' value='Game 1' onclick='/gameone')
+		br
+		h2 Welcome to the Memory Game!
+		br
+		p This game tests your ability to memorize a set of objects on a picture in 20 seconds. After the time is up, you need to name the objects that you saw. The more you get right, the higher the score.
+		br
+		br
+		h4 Please select the game:
+		br
+		div(class='buttons')
+			input(id='buttonOne' class='button' type="button" value="Game 1" onclick="window.location.href='/animal'")
 			|
 			|
-			input(type='button' value='Game 2' onclick='/gametwo')
-
-
+			input(id='buttonTwo' class='button' type="button" value="Game 2" onclick="window.location.href='/food'")
 
 
 
