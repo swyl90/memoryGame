@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/memorygame';
 
-//Weclome page
+//Welcome page
 app.get('/', function(req,res) { 
     res.render('welcome')
 })
@@ -20,8 +20,12 @@ app.get('/', function(req,res) {
 
 //Game 1 page
 app.get('/gameone', function(req,res) {
-    res.render('gameone')
+    res.render('animal')
 })
+
+/*app.post('/gameone', function(req, res) {
+	
+})*/
 
 
 //Game 2 page
