@@ -1,3 +1,8 @@
+body {
+	background-image: url("../img/nest.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 label {
 	font-size: 18px
@@ -27,67 +32,43 @@ h4 {
 }
 
 .tweet {
-	width: 200px;
+	width: 150px;
 	float: left;
-	margin-left: 4%;
+	margin-left: 5%;
 }
 
-#buttonOne, #buttonTwo {
-	font-family: 'Patrick Hand SC';
-	font-weight: bold;
-}
-
-.animals, .food {
-	width: 90%;
-	margin: 3%;
-}
-
-.hide {
-	width: 90%;
-	margin: 3%;
-}
-
-.buttons {
-	padding: auto;
-	text-align: center;
-}
-
-.button {
-	display: inline-block;
-	margin: 0 auto;
-	padding: 15px 25px;
-	font-size: 24px;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	outline: none;
-	color: #fff;
-	background-color: #3366cc;
-	border: none;
-	border-radius: 10px;
-	box-shadow: 6px 6px 5px #bab3b3
-}
-
-.button:hover {
-	background-color: #1792ee
-}
-
-.button:active {
-	background-color: #1792ee;
-	box-shadow: 0 4px #b2caf4;
-	transform: translateY(4px);
-}
-
-#buttonOne {
+.tweet2 {
+	width: 150px;
 	float: left;
-	margin: 25px 50px 75px 450px
+	margin-left: 5%;
 }
 
-#buttonTwo {
-	float: right;
-	margin: 25px 450px 75px 50px
+.start {
+	width: 22%;
+	margin-left: 39%;
 }
 
-#checkbox {
-	margin-right: 15px;
+.start:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.0);
+}
+
+.submit {
+	width: 20%;
+	margin-left: 22%;
+}
+
+.submit:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
+}
+
+.submit2 {
+	width: 20%;
+	margin-left: 10%;
+}
+
+.submit2:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
 }
