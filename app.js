@@ -61,6 +61,7 @@ app.post('/animal', function(req, res) {
 	var answer4 = req.body.answer4
 	var answer5 = req.body.answer5
 	
+<<<<<<< HEAD
 Animal.findAll({
 	where: {
 	$or: [{ 
@@ -81,6 +82,30 @@ Animal.findAll({
 			res.render('score', {result: result, message: 'Wow, superstar. You rock!'} )
 		}
 	});
+
+  Animal.findAll({
+        where: {
+        $or: [
+          { name: [answer1, answer2, answer3, answer4, answer5]}
+        ]
+        }
+  }).then(result => {
+
+    if (result.length === 0) {
+      res.render('score', {result: result, message: 'Sorry, you didn\'t get anything right. Please try again'} )
+    } else if (result.length === 1 || result.length === 2) {
+      res.render('score', {result: result, message: 'You can do better, try again'} )
+    } else if (result.length === 0) {
+      res.render('score', {result: result, message: 'Sorry, you didn\'t get anything right. Please try again'} )
+    } else if (result.length === 3 || result.length === 4) {
+      res.render('score', {result: result, message: 'Good job, almost getting there..'} )
+    } else {
+      res.render('score', {result: result, message: 'Wow, superstar. You rock!'} )
+    }
+
+    
+  });
+
 })
 
 //Game 2 page
