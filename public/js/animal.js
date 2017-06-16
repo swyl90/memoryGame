@@ -18,7 +18,7 @@ var show = function() {
 	$('.hide').fadeIn()
 	$('.test').fadeIn()
 };
-setTimeout(show, 1000)
+setTimeout(show, 5000)
 
 })
 
@@ -33,4 +33,9 @@ $('.help').click(function() {
 })
 
 
-
+$(function() {
+	$('#type').typed({
+		strings: ["hello world", "this is amazing"],
+		typeSpeed: 0
+	});
+});

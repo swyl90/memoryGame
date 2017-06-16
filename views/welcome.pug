@@ -3,21 +3,28 @@ html
 	head
 		style
 			include ../public/css/stylesheet.css
+		script
 		link(href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet")
 		link(href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet")
-		title Memory Game
+		title Memory Loss
 	body
-		h2 Welcome to the Memory Game!
-		img(class='tweet', src='../img/tweet4.png')
-		p This game tests your ability to memorize a set of objects on a picture in 20 seconds. After the time is up, you need to name the objects that you saw. The more you get right, the higher the score.
-		h4 Choose your weapon:
+		h2 Memory Loss
+		img(class='tweet', src='../img/dizzy.png')
+		img(class='tweet2', src='../img/love.png')
+		p Oh no! Tweety is suffering from memory loss. <br>Help him find his way back home. <br>Test your memory ability and memorize a set of objects in 20 seconds.<br> Which each correct answer,Tweety is one step closer to home.
+		div(class='text')
+			h4 Bring Tweety home. 
+		img(class='start' src='../img/start.png')
+		div(class='options')
+			h4 Help him with finding:
 		br
 		div(class='buttons')
-			input(id='buttonOne' class='button' type="button" value="Animals" onclick="window.location.href='/animal'")
-			|
-			|
-			input(id='buttonTwo' class='button' type="button" value="Food" onclick="window.location.href='/food'")
+			input(class='submit' type='image' src='../img/animalsbut.png' alt='game1' onclick="window.location.href='/animal'")
+			input(class='submit2' type='image' src='../img/foodbut.png' alt='game1' onclick="window.location.href='/food'")
+		p(íd='type')
+
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+		script
+			include ../public/js/main.js
 
 
-
-			
