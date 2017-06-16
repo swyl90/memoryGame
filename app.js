@@ -3,18 +3,13 @@ var app = express();
 var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('./public/css'));
-app.use(express.static('./public/img'));
-
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'));
 
 var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/memorygame';
 
  app.set('views', './views');
  app.set('view engine', 'pug');
- 
- app.use(express.static('./public/css'))
- 
+  
  var Sequelize = require('sequelize');
  var db = new Sequelize('postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/memorygame');
  
@@ -45,13 +40,13 @@ db.sync({force:true}).then(function() {
       ]);  
   })
  
-const AnswerA = db.define('answera', {
-  answer1: Sequelize.STRING,
-  answer2: Sequelize.STRING,
-  answer3: Sequelize.STRING,
-  answer4: Sequelize.STRING,
-  answer5: Sequelize.STRING
-});
+// const AnswerA = db.define('answer', {
+//   answer1: Sequelize.STRING,
+//   answer2: Sequelize.STRING,
+//   answer3: Sequelize.STRING,
+//   answer4: Sequelize.STRING,
+//   answer5: Sequelize.STRING
+// });
  
 
  
@@ -71,15 +66,40 @@ app.post('/animal', function(req, res) {
 
 })
 
-
-
-
-
 //Game 2 page
 app.get('/food', function(req,res) {
     res.render('food')
 })
 
+app.post('/food', function(req,res) {
+	var answer1 = req.body.answer1
+	var answer2 = req.body.answer2
+	var answer3 = req.body.answer3
+	var answer4 = req.body.answer4
+	var answer5 = req.body.answer5
+	var answer6 = req.body.answer6
+	var answer7 = req.body.answer7
+
+	Food.findAll({
+        where: {
+        $or: [
+          { name: [answer1, answer2, answer3, answer4, answer5, answer6, answer7]}
+        ]
+        }
+	}).then(result => {
+		if (result.length === 0) {
+		res.render('score', {result: result, message: 'Sorry, you didn\'t get anything right. Please try again'} )
+		} else if (result.length === 1 || result.length === 2) {
+		res.render('score', {result: result, message: 'You can do better, try again'} )
+		} else if (result.length === 0) {
+		res.render('score', {result: result, message: 'Sorry, you didn\'t get anything right. Please try again'} )
+		} else if (result.length === 3 || result.length === 4) {
+		res.render('score', {result: result, message: 'Good job, almost getting there..'} )
+		} else {
+		res.render('score', {result: result, message: 'Wow, superstar. You rock!'} )
+		}
+	});
+})
 
 // score
 app.get('/score', function(req, res) {
