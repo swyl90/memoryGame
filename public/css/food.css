@@ -1,0 +1,23 @@
+h2, p, h4 {
+	text-align: center;
+}
+
+label {
+	font-size: 18px
+}
+
+.animals, .food {
+	width: 90%;
+	margin: 3%;
+}
+
+.hide {
+	width: 90%;
+	margin: 3%;
+}
+
+
+
+#checkbox {
+	margin-right: 15px;
+}
