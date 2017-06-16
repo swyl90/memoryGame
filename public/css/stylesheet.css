@@ -1,9 +1,40 @@
-h2, p, h4 {
-	text-align: center;
-}
 
 label {
 	font-size: 18px
+}
+
+h2 {
+	font-family: 'Monofett';
+	text-align: center;
+	font-size: 70px;
+}
+
+p {
+	font-family: 'Patrick Hand SC';
+	font-size: 40px;
+	margin: 50px;
+	margin-left: 20%;
+	margin-right: 4%;
+	padding: 20px;
+	text-align: left;
+}
+
+h4 {
+	font-family: 'Patrick Hand SC';
+	font-size: 30px;
+	text-align: center;
+	
+}
+
+.tweet {
+	width: 200px;
+	float: left;
+	margin-left: 4%;
+}
+
+#buttonOne, #buttonTwo {
+	font-family: 'Patrick Hand SC';
+	font-weight: bold;
 }
 
 .animals, .food {
