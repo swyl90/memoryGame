@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: true}));
+
 app.use(express.static('public'));
 
 var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/memorygame';
@@ -27,29 +28,20 @@ db.sync({force:true}).then(function() {
         {name: 'apple'}, 
         {name: 'bread'}, 
         {name: 'egg'}, 
-        {name:'chocolate'}, 
-        {name:'pizza'}
+        {name: 'chocolate'}, 
+        {name: 'pizza'}
       ]);
 
     Animal.bulkCreate([
         {name: 'chicken'}, 
-        {name:'cow'}, 
+        {name: 'cow'}, 
         {name: 'dog'}, 
         {name: 'rabbit'}, 
         {name: 'sheep'}
       ]);  
   })
- 
-// const AnswerA = db.define('answer', {
-//   answer1: Sequelize.STRING,
-//   answer2: Sequelize.STRING,
-//   answer3: Sequelize.STRING,
-//   answer4: Sequelize.STRING,
-//   answer5: Sequelize.STRING
-// });
- 
 
- 
+
 //Weclome page
 app.get('/', function(req,res) { 
     res.render('welcome')
@@ -63,6 +55,36 @@ app.get('/animal', function(req,res) {
 })
 
 app.post('/animal', function(req, res) {
+	var answer1 = req.body.answer1
+	var answer2 = req.body.answer2
+	var answer3 = req.body.answer3
+	var answer4 = req.body.answer4
+	var answer5 = req.body.answer5
+	
+  Animal.findAll({
+        where: {
+        $or: [
+          { name: [answer1, answer2, answer3, answer4, answer5]}
+        ]
+        }
+  }).then(result => {
+
+    if (result.length === 0) {
+      res.render('score', {result: result, message: 'Sorry, you didn\'t get anything right. Please try again'} )
+    } else if (result.length === 1 || result.length === 2) {
+      res.render('score', {result: result, message: 'You can do better, try again'} )
+    } else if (result.length === 0) {
+      res.render('score', {result: result, message: 'Sorry, you didn\'t get anything right. Please try again'} )
+    } else if (result.length === 3 || result.length === 4) {
+      res.render('score', {result: result, message: 'Good job, almost getting there..'} )
+    } else {
+      res.render('score', {result: result, message: 'Wow, superstar. You rock!'} )
+
+    }
+
+    
+  });
+
 
 })
 
