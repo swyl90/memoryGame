@@ -1,9 +1,27 @@
-h2, p, h4 {
+h1, h3 {
 	text-align: center;
 }
 
+h1 {
+	font-family: 'Monofett', 'Arial', 'Times New Roman';
+	font-size: 50px;
+	margin-top: 80px;
+}
+
+h3 {
+	font-family: 'Patrick Hand SC', 'Arial', 'Times New Roman';
+	font-size: 30px;
+	margin-top: 60px
+}
+
+img.food {
+	margin-top: 100px;
+}
+
 label {
-	font-size: 18px
+	font-size: 30px;
+	font-family: 'Patrick Hand SC';
+	font-weight: normal;
 }
 
 .animals, .food {
@@ -16,8 +34,7 @@ label {
 	margin: 3%;
 }
 
-
-
 #checkbox {
 	margin-right: 15px;
 }
+

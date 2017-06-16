@@ -61,7 +61,6 @@ app.post('/animal', function(req, res) {
 	var answer4 = req.body.answer4
 	var answer5 = req.body.answer5
 	
-<<<<<<< HEAD
 Animal.findAll({
 	where: {
 	$or: [{ 

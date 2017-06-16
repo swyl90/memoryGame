@@ -1,8 +1,12 @@
 doctype html
 html
 	head
+		style
+			include ../public/css/score.css
+		link(href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet")
 		title Score
 	body
-		H1 #{message}
+		h1 #{message}
 		p Your score is: #{result.length} out of 5!
 

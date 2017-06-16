@@ -3,17 +3,19 @@ html
 	head
 		style
 			include ../public/css/food.css
-			include ../public/css/homepage.css
+		link(href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet")
 		title Food
 	body
-		h1 Food Game
+		h1 Remember these food items!
+		h3 You have <span id="timer"></span> seconds left!
 			img(class='food', src='../img/food.png')
 			img(class='hide', src='../img/test.png')
 
-			div(class='testTwo')
-				form(class='food' name='food' action='/food', method='post', autocomplete='off')
+			div(class='test')
+				form(class='test' name='test' action='/food', method='post', autocomplete='off')
 					fieldset
-						legend Which five foods did you see? Fill in the blanks. 
+						legend Which five foods did you see? Tick the correct ones. 
 						input(type='checkbox' name='answer1' onClick='return KeepCount()' value='egg') 
 						label egg
 						br
@@ -37,7 +39,8 @@ html
 						br
 						input(type='submit', value='Check your answers')
 		a(href='/') Main page
+		script(type='text/javascript' src='https://code.jquery.com/jquery-1.12.4.min.js')
 		script
 			include ../public/js/checkbox.js
-		script(type='text/javascript' src='https://code.jquery.com/jquery-1.12.4.min.js')
+
 

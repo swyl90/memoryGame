@@ -1,0 +1,17 @@
+h1, p {
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Patrick Hand SC', 'Arial', 'Times New Roman';
+	font-size: 30px;
+	margin-top: 100px;
+	font-weight: normal;
+}
+
+p {
+	font-family: 'Patrick Hand SC', 'Arial', 'Times New Roman';
+	font-size: 20px;
+	margin-top: 40px;
+	font-weight: normal;
+}
