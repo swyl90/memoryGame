@@ -83,7 +83,6 @@ app.post('/animal', function(req, res) {
       res.render('score', {result: result, message: 'Good job, almost getting there..'} )
     } else {
       res.render('score', {result: result, message: 'Wow, superstar. You rock!'} )
-
     }
 
     
