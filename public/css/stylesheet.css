@@ -1,0 +1,64 @@
+body {
+	background-image: url("../img/nest.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+label {
+	font-size: 18px
+}
+
+h2 {
+	font-family: 'Monofett';
+	text-align: center;
+	font-size: 70px;
+}
+
+p {
+	font-family: 'Patrick Hand SC';
+	font-size: 40px;
+	margin: 50px;
+	margin-left: 20%;
+	margin-right: 4%;
+	padding: 20px;
+	text-align: left;
+}
+
+h4 {
+	font-family: 'Patrick Hand SC';
+	font-size: 30px;
+	text-align: center;
+	
+}
+
+.tweet {
+	width: 150px;
+	float: left;
+	margin-left: 5%;
+}
+
+.tweet2 {
+	width: 150px;
+	float: left;
+	margin-left: 5%;
+}
+
+.start {
+	width: 22%;
+	margin-left: 39%;
+}
+
+.start:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.0);
+}
+
+.submit {
+	width: 20%;
+	margin-left: 22%;
+}
+
+.submit:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
+}
