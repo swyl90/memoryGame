@@ -58,7 +58,12 @@ h4 {
 	margin-left: 22%;
 }
 
-.submit:hover {
+.submit2 {
+	width: 20%;
+	margin-left: 15%;
+}
+
+.submit:hover, .submit2:hover {
 	padding: 2px 0 0 2px;  
 	transform: scale(1.1);
 }

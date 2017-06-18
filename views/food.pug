@@ -7,11 +7,23 @@ html
 		link(href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet")
 		title Food
 	body
-		h1 Remember these food items!
-		h3 You have <span id="timer"></span> seconds left!
-			img(class='food', src='../img/food.png')
-			img(class='hide', src='../img/test.png')
-
+		//- div(id='home')
+		//- 	a(href='/') 
+		//- 		img(class='home' src='../img/home.png') 
+		div(id="ac-wrapper" style='display:none')
+			div(id="popup")
+				center
+					h1 Hello, there!
+					h2 Remember the food on the picture. You have 20 seconds for that! Click Start when you are ready. 
+					input(type="submit" name="submit" value="Start" id="startClock" class='start' onClick="PopUp('remove')")
+		div(class='tweety')
+			img(class='tweety' src= '../img/tweet1.png')
+		div(class='text')
+			//- h1 Remember these food items!
+			h3 You have <span id="count"></span> seconds left!
+			div(class='images')
+				img(class='food', src='../img/food.png')
+				img(class='hide', src='../img/test.png')
 			div(class='test')
 				form(class='test' name='test' action='/food', method='post', autocomplete='off')
 					fieldset
@@ -37,8 +49,7 @@ html
 						input(type='checkbox', name='answer7' onClick='return KeepCount()' value='chocolate')
 						label chocolate
 						br
-						input(type='submit', value='Check your answers')
-		a(href='/') Main page
+						input(type='submit', class = 'check' value='Check your answers')
 		script(type='text/javascript' src='https://code.jquery.com/jquery-1.12.4.min.js')
 		script
 			include ../public/js/checkbox.js

@@ -142,6 +142,7 @@ app.post('/food', function(req,res) {
 	});
 })
 
+
 // score
 app.get('/score', function(req, res) {
 	res.render('score')

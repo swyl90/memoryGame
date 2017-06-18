@@ -30,56 +30,55 @@ function KeepCount() {
 	}
 }
 
+//Pop up window
+function PopUp(hideOrshow) {
+	if (hideOrshow == 'remove') {
+		document.getElementById('ac-wrapper').style.display = "none";
+	} else {
+		document.getElementById('ac-wrapper').removeAttribute('style');
+	};
+}
+
+window.onload = function () {
+	setTimeout(function () {
+	PopUp('show');
+	}, 1500);
+}
+
 //Set the timer for 20 seconds
-var Timer = function(opts) {
-  var self = this;
-
-  self.opts     = opts || {};
-  self.element  = opts.element || null;
-  self.seconds  = opts.seconds || 30;
-
-  self.start = function() {
-    self.interval = setInterval(countDown, 1000);
-  };
-
-  self.stop = function() {
-    clearInterval(self.interval);
-  };
-
-  function countDown() {
-  	self.seconds--;
-    if (self.seconds == 0) {
-      self.stop();
-    }
-
-    if (self.seconds < 0) {
-      self.minutes--;
-    }
-
-    if (self.seconds <= 9) { self.seconds = '0' + self.seconds; }
-
-    self.element.textContent = self.seconds;
-  }
-};
-
-var myTimer = new Timer({
-  seconds: 20,
-  element: document.querySelector('#timer')
+$('.start').click( function(){
+   var counter = 5;
+   setInterval(function() {
+     counter--;
+      if (counter >= 0) {
+         span = document.getElementById("count");
+         span.innerHTML = counter;
+      }
+      if (counter === 0) {
+         clearInterval(counter);
+       }
+     }, 1000);
 });
-
-myTimer.start();
 
 //Hide the form and question marks, make them reappear after 20 seconds and hide the picture
 $(document).ready(function() {
 	$('.hide').hide()
 	$('.test').hide()
+	$('.text').hide()
+	$('.food').hide()
+	$('.tweety').hide()
 })
 
-var show = function() {
-	$('.food').hide()
-	$('.hide').fadeIn()
-	$('.test').fadeIn()
-};
-setTimeout(show, 2000)
+$('.start').click(function() {
+	$('.food').fadeIn()
+	$('.text').fadeIn()
+	$('.tweety').fadeIn()
 
+	var show = function() {
+		$('.food').hide()
+		$('.hide').fadeIn()
+		$('.test').fadeIn()
+	};
+	setTimeout(show, 5000)
+});
 
