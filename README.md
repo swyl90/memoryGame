@@ -12,4 +12,4 @@ Help him find his way back home.
 Test your memory ability and memorize a set of objects in 10 seconds.
 With each correct answer,Tweety is one step closer to home.
 
-![Optional Text](./public/img/screenshots/Schermopname (139).png)
+![ScreenShot](https://raw.githubusercontent.com/i-saumitra/Voice-controlled-MP3-Player/master/screenshot.jpg)
