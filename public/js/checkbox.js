@@ -47,7 +47,7 @@ window.onload = function () {
 
 //Set the timer for 20 seconds
 $('.start').click( function(){
-   var counter = 5;
+   var counter = 10;
    setInterval(function() {
      counter--;
       if (counter >= 0) {
@@ -79,6 +79,6 @@ $('.start').click(function() {
 		$('.hide').fadeIn()
 		$('.test').fadeIn()
 	};
-	setTimeout(show, 5000)
+	setTimeout(show, 10000)
 });
 
