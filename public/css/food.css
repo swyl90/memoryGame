@@ -1,0 +1,161 @@
+body {
+	background-image: url("../img/air(70).png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1, h3 {
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Monofett', 'Arial', 'Times New Roman';
+	font-size: 50px;
+	margin-top: 80px;
+}
+
+h3 {
+	font-family: 'Patrick Hand SC', 'Arial', 'Times New Roman';
+	font-size: 30px;
+	margin-top: 60px
+}
+
+img.food {
+	margin-top: 100px;
+}
+
+label {
+	font-size: 30px;
+	font-family: 'Patrick Hand SC';
+}
+
+input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+    -moz-appearance: none;
+}
+
+legend {
+	font-family: 'Patrick Hand SC', 'Arial', 'Times New Roman';
+	font-size: 30px;
+	margin-top: 60px;
+	font-weight: bold;
+}
+
+.home {
+	width: 18%;
+	margin-left: 1050px;
+	margin-top: 30px;
+}
+
+
+.home:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
+}
+
+.tweety {
+	display: inline-block;
+	width: 150px;
+	float: left;
+	margin-left: 150px;
+	margin-top: 20px;
+}
+
+.test {
+	text-align: center;
+}
+
+.text {
+	display: inline-block;
+	text-align: center;
+	margin-top: 0px;
+}
+
+.start {
+	border-radius: 20px;
+	background-color: beige;
+	font-family: 'Patrick Hand SC', 'Arial', 'Times New Roman';
+	font-size: 20px;
+}
+
+.start:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
+}
+
+
+
+.text h3 {
+	font-size: 30px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+.food {
+	display: inline-block;
+	text-align: center;
+	width: 80%;
+	margin-top: 0px;
+}
+
+.hide {
+	display: inline-block;
+	text-align: center;
+	width: 80%;
+	margin-top: 70px;
+}
+
+.check {
+	background-color: beige;
+	font-family: 'Patrick Hand SC', 'Arial', 'Times New Roman';
+	font-size: 20px;
+	border-radius: 20px;
+	margin-top: 20px;
+}
+
+.check:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
+}
+
+#home {
+	font-family: 'Patrick Hand SC', 'Arial', 'Times New Roman';
+	font-size: 30px;
+	float: right;
+	margin-top: 50px;
+	margin-right: 30px; 
+}
+
+#ac-wrapper {
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+/*background: rgba(255,255,255,.6);
+*/z-index: 1001;
+}
+
+
+#popup{
+font-family: 'Patrick Hand SC', 'Arial', 'Times New Roman';
+font-size: 18px;
+font-weight: normal;
+position: fixed;
+width: 555px;
+height: 375px;
+background: #FFFFFF;
+border: 5px solid #000;
+border-radius: 25px;
+-moz-border-radius: 25px;
+-webkit-border-radius: 25px;
+box-shadow: #64686e 0px 0px 3px 3px;
+-moz-box-shadow: #64686e 0px 0px 3px 3px;
+-webkit-box-shadow: #64686e 0px 0px 3px 3px;
+position: relative;
+top: 150px; left: 375px;
+}
+
+
+

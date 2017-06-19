@@ -2,42 +2,55 @@ doctype html
 html
 	head
 		style
-			include ../public/css/stylesheet.css
-		script
-			//- include ../public/js/main.js
-		
+			include ../public/css/food.css
+		link(href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet")
 		title Food
 	body
-		h1 Food Game
-			img(class='food', src='../food.png')
-			img(class='hide', src='../test.png')
-
-			div(class='testTwo')
-				form(class='animal' action='/food', method='post', autocomplete='off')
+		a(href='/')
+			img(class='home' src='../img/home.png' )
+		div(id="ac-wrapper" style='display:none')
+			div(id="popup")
+				center
+					h1 Hello, there!
+					h2 Remember the food on the picture. You have 20 seconds for that! Click Start when you are ready. 
+					input(type="submit" name="submit" value="Start" id="startClock" class='start' onClick="PopUp('remove')")
+		div(class='tweety')
+			img(class='tweety' src= '../img/tweet1.png')
+		div(class='text')
+			//- h1 Remember these food items!
+			h3 You have <span id="count"></span> seconds left!
+			div(class='images')
+				img(class='food', src='../img/food.png')
+				img(class='hide', src='../img/test.png')
+			div(class='test')
+				form(class='test' name='test' action='/food', method='post', autocomplete='off')
 					fieldset
-						legend Which five foods did you see? Fill in the blanks. 
-						input(type='checkbox' name='answer' value='egg' id='checkbox') 
-						label(for='egg') egg
+						legend Which five foods did you see? Tick the correct ones. 
+						input(type='checkbox' name='answer1' onClick='return KeepCount()' value='egg') 
+						label egg
 						br
-						input(type='checkbox', name='answer' value='burger' id='checkbox')
-						label(for='burger') burger
+						input(type='checkbox', name='answer2' onClick='return KeepCount()' value='burger')
+						label burger
 						br
-						input(type='checkbox' name='answer' value='pizza' id='checkbox')
-						label(for='pizza') pizza
+						input(type='checkbox' name='answer3' onClick='return KeepCount()' value='pizza')
+						label pizza
 						br
-						input(type='checkbox', name='answer' value='apple' id='checkbox')
-						label(for='apple') apple
+						input(type='checkbox', name='answer4' onClick='return KeepCount()' value='apple')
+						label apple
 						br
-						input(type='checkbox' name='answer' value='bread' id='checkbox')
-						label(for='bread') bread
+						input(type='checkbox' name='answer5' onClick='return KeepCount()' value='bread')
+						label bread
 						br
-						input(type='checkbox' name='answer' value='banana' id='checkbox')
-						label(for='banana') banana
+						input(type='checkbox' name='answer6' onClick='return KeepCount()' value='banana')
+						label banana
 						br
-						input(type='checkbox', name='answer' value='chocolate' id='checkbox')
-						label(for='chocolate') chocolate
+						input(type='checkbox', name='answer7' onClick='return KeepCount()' value='chocolate')
+						label chocolate
 						br
-						input(type='submit', value='Check your answers')
-		a(href='/') Main page
+						input(type='submit', class = 'check' value='Check your answers')
+		script(type='text/javascript' src='https://code.jquery.com/jquery-1.12.4.min.js')
+		script
+			include ../public/js/checkbox.js
 
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+
