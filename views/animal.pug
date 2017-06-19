@@ -2,29 +2,47 @@ doctype html
 html
 	head
 		style
-			include ../public/css/stylesheet.css
-			include ../public/js/javascript.js
+			include ../public/css/animal.css
+		link(href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet")
+		
 		title Animal
 	body
-		h1 Animal Game
-		div(class='picture')
+		h2 Animal Game
+		a(href='/')
+			img(class='home' src='../img/home.png' )
+		img(class='help' src='../img/help.png')
+
+		div(class='instructions')
+			img(class='tweet', src='../img/tweet1.png')
+			h6 Try to remember all five animals in 10 seconds. <br>Press start when ready.
+			img(class='start' src='../img/start.png')
+		
+		div(class='game')
+			h3 You have <span id="count"></span> seconds left!
 			img(class='animals', src='../img/animals.png')
+			img(class='hide', src='../img/test.png')
+		
 
 		div(class='test')
 			form(class='animal' action='/animal', method='post', autocomplete='off')
-				fieldset
-					legend What did you just see? Fill in the blanks. 
-					input(type='text', name='answer')
+				p Which five animals did you see? Fill in the blanks. Order doesn't matter.
 					br
-					input(type='text', name='answer')
 					br
-					input(type='text', name='answer')
+					h7 1.
+					input(type='text', name='answer1')
+					h7 2.
+					input(type='text', name='answer2')
+					h7 3.
+					input(type='text', name='answer3')
+					h7 4.
+					input(type='text', name='answer4')
+					h7 5.
+					input(type='text', name='answer5')
 					br
-					input(type='text', name='answer')
-					br
-					input(type='text', name='answer')
-					br
-					input(type='submit', value='Check your answers')
-		
+					input(class='submit' type='image' src='../img/submit.png' alt='submit')
 
 
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+		script
+			include ../public/js/animal.js

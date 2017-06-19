@@ -1,0 +1,140 @@
+body {
+	background-image: url("../img/air(70).png");
+	background-repeat: repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+
+
+h2 {
+	font-family: 'Monofett';
+	font-size: 50px;
+	margin-top: 0;
+	margin-left: 10px;
+	float: left;
+
+}
+
+h3 {
+	font-family: 'Patrick Hand SC';
+	font-size: 50px;
+	margin-top: 0;
+	margin-left: 10px;
+	float: left;
+}
+
+.home {
+	width: 18%;
+	margin-right: 10px;
+	margin-top: 5px;
+	float: right;
+}
+
+.home:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
+}
+
+.help {
+	width: 18%;
+	margin-right: 10px;
+	margin-top: 5px;
+	float: right;
+}
+
+.help:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
+}
+
+div {
+	clear: left;
+}
+
+/* instructions */
+.tweet {
+	width: 200px;
+	margin-left: 14%;
+	float: left;
+}
+
+h6 {
+	font-family: 'Patrick Hand SC';
+	font-size: 30px;
+	float: left;
+	margin-left: 5%;
+	margin-top: 7%;
+	text-align: center;
+}	
+
+.start {
+	width: 20%;
+	margin-top: 17%;
+	margin-left: -27%;
+
+}
+
+.start:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
+}
+
+
+/* game */
+.tweet2 {
+	width: 80px;
+	padding-left: 15px;
+	float: right;
+}
+
+.button {
+	width: 20%;
+	float: right;
+}
+
+.button:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
+}
+
+/* pictures */
+.animals {
+	width: 85%;
+	margin: 1%;
+	margin-left: 8%;
+}
+
+
+.hide {
+	width: 85%;
+	margin: 1%;
+	margin-left: 8%;
+}
+
+
+/* form */
+p {
+	font-family: 'Patrick Hand SC';
+	font-size: 30px;
+	float: left;
+	padding-left: 5%;
+}
+
+input {
+	margin-left: 30px;
+	margin-right: 30px;
+	float: center;
+}
+
+.submit {
+	width: 20%;
+	margin-left: 40%;
+	margin-top: 3%;
+}
+
+.submit:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
+}
+
