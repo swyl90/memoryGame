@@ -10,7 +10,12 @@ var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process
 
  app.set('views', './views');
  app.set('view engine', 'pug');
+<<<<<<< HEAD
   
+=======
+
+ 
+>>>>>>> 61d583e81c0fc88a62dce114e007849f0219eace
  var Sequelize = require('sequelize');
  var db = new Sequelize('postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/memorygame');
  
@@ -102,7 +107,6 @@ Animal.findAll({
       res.render('score', {result: result, message: 'Wow, superstar. You rock!'} )
     }
 
-    
   });
 
 })
