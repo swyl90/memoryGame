@@ -11,8 +11,7 @@ var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process
 
  app.set('views', './views');
  app.set('view engine', 'pug');
- 
- app.use(express.static('./public/css'))
+
  
  var Sequelize = require('sequelize');
  var db = new Sequelize('postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/memorygame');
@@ -85,7 +84,6 @@ app.post('/animal', function(req, res) {
       res.render('score', {result: result, message: 'Wow, superstar. You rock!'} )
     }
 
-    
   });
 
 
