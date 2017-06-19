@@ -26,12 +26,22 @@ p {
 }
 
 h1 {
-float: center;
-margin-top: 300px;
+margin-top: 200px;
+margin-right: 100px;
 }
 
 p {
-float: center;
+margin-right: 120px;
 margin-top: 0px;
-margin-right: 90px;
+}
+
+.home {
+	width: 18%;
+	margin-left: 1050px;
+	margin-top: 20px;
+}
+
+.home:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
 }

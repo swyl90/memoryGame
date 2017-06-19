@@ -6,27 +6,20 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static('public'));
 
-var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/memorygame';
+app.set('views', './views');
+app.set('view engine', 'pug');
 
- app.set('views', './views');
- app.set('view engine', 'pug');
-<<<<<<< HEAD
-  
-=======
+var Sequelize = require('sequelize');
+var db = new Sequelize('postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/memorygame');
 
- 
->>>>>>> 61d583e81c0fc88a62dce114e007849f0219eace
- var Sequelize = require('sequelize');
- var db = new Sequelize('postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/memorygame');
- 
 
-  var Food = db.define('food', {
-      name: Sequelize.STRING
-  });
- 
-  var Animal = db.define('animal', {
-      name: Sequelize.STRING
-  });
+var Food = db.define('food', {
+    name: Sequelize.STRING
+});
+
+var Animal = db.define('animal', {
+    name: Sequelize.STRING
+});
  
 db.sync({force:true}).then(function() {
     Food.bulkCreate([
@@ -65,27 +58,6 @@ app.post('/animal', function(req, res) {
 	var answer3 = req.body.answer3
 	var answer4 = req.body.answer4
 	var answer5 = req.body.answer5
-	
-Animal.findAll({
-	where: {
-	$or: [{ 
-		name: [answer1, answer2, answer3, answer4, answer5
-		]}
-	]
-	}
-}).then(result => {
-		if (result.length === 0) {
-			res.render('score', {result: result, message: 'Sorry, you didn\'t get anything right. Please try again'} )
-		} else if (result.length === 1 || result.length === 2) {
-			res.render('score', {result: result, message: 'You can do better, try again'} )
-		} else if (result.length === 0) {
-			res.render('score', {result: result, message: 'Sorry, you didn\'t get anything right. Please try again'} )
-		} else if (result.length === 3 || result.length === 4) {
-			res.render('score', {result: result, message: 'Good job, almost getting there..'} )
-		} else {
-			res.render('score', {result: result, message: 'Wow, superstar. You rock!'} )
-		}
-	});
 
   Animal.findAll({
         where: {
@@ -94,21 +66,20 @@ Animal.findAll({
         ]
         }
   }).then(result => {
-
     if (result.length === 0) {
-      res.render('score', {result: result, message: 'Sorry, you didn\'t get anything right. Please try again'} )
-    } else if (result.length === 1 || result.length === 2) {
-      res.render('score', {result: result, message: 'You can do better, try again'} )
-    } else if (result.length === 0) {
-      res.render('score', {result: result, message: 'Sorry, you didn\'t get anything right. Please try again'} )
-    } else if (result.length === 3 || result.length === 4) {
-      res.render('score', {result: result, message: 'Good job, almost getting there..'} )
+    res.render('score01', {result: result, message: 'Sorry, you didn\'t get any right. Try again'} )
+    } else if (result.length === 1) {
+    res.render('score02', {result: result, message: 'You can do better, try again'} )
+    } else if (result.length === 2) {
+    res.render('score03', {result: result, message: 'You can do better, try again'} )
+    } else if (result.length === 3) {
+    res.render('score04', {result: result, message: 'Good job, almost getting there...'} )
+    } else if (result.length === 4) {
+    res.render('score05', {result: result, message: 'Good job, almost there...'} )
     } else {
-      res.render('score', {result: result, message: 'Wow, superstar. You rock!'} )
+    res.render('score06', {result: result, message: 'Wow, superstar. You rock!'} )
     }
-
   });
-
 })
 
 //Game 2 page
@@ -133,15 +104,17 @@ app.post('/food', function(req,res) {
         }
 	}).then(result => {
 		if (result.length === 0) {
-		res.render('score', {result: result, message: 'Sorry, you didn\'t get anything right. Please try again'} )
-		} else if (result.length === 1 || result.length === 2) {
-		res.render('score', {result: result, message: 'You can do better, try again'} )
-		} else if (result.length === 0) {
-		res.render('score', {result: result, message: 'Sorry, you didn\'t get anything right. Please try again'} )
-		} else if (result.length === 3 || result.length === 4) {
-		res.render('score', {result: result, message: 'Good job, almost getting there..'} )
+		res.render('score01', {result: result, message: 'Sorry, you didn\'t get any right. Try again'} )
+		} else if (result.length === 1) {
+		res.render('score02', {result: result, message: 'You can do better, try again'} )
+    } else if (result.length === 2) {
+    res.render('score03', {result: result, message: 'You can do better, try again'} )
+		} else if (result.length === 3) {
+		res.render('score04', {result: result, message: 'Good job, almost getting there...'} )
+    } else if (result.length === 4) {
+    res.render('score05', {result: result, message: 'Good job, almost there..'} )
 		} else {
-		res.render('score', {result: result, message: 'Wow, superstar. You rock!'} )
+		res.render('score06', {result: result, message: 'Wow, superstar. You rock!'} )
 		}
 	});
 })

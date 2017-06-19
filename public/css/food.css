@@ -42,6 +42,18 @@ legend {
 	font-weight: bold;
 }
 
+.home {
+	width: 18%;
+	margin-left: 1050px;
+	margin-top: 30px;
+}
+
+
+.home:hover {
+	padding: 2px 0 0 2px;  
+	transform: scale(1.1);
+}
+
 .tweety {
 	display: inline-block;
 	width: 150px;
@@ -72,22 +84,14 @@ legend {
 	transform: scale(1.1);
 }
 
-/*.text h1 {
-	font-size: 45px;
-}*/
+
 
 .text h3 {
 	font-size: 30px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-/*
-.images {
-	display: inline-block;
-	text-align: center;
-	margin-top: 0px;
-	width: 90%;
-}*/
+
 
 .food {
 	display: inline-block;
@@ -123,9 +127,6 @@ legend {
 	margin-top: 50px;
 	margin-right: 30px; 
 }
-/*#checkbox {
-	margin-right: 15px;
-}*/
 
 #ac-wrapper {
 top: 0;
