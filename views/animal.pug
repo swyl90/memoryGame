@@ -15,17 +15,18 @@ html
 
 		div(class='instructions')
 			img(class='tweet', src='../img/tweet1.png')
-			h6 Try to remember all five animals in 20 seconds. <br>Press start when ready.
+			h6 Try to remember all five animals in 10 seconds. <br>Press start when ready.
 			img(class='start' src='../img/start.png')
 		
 		div(class='game')
+			h3 You have <span id="count"></span> seconds left!
 			img(class='animals', src='../img/animals.png')
 			img(class='hide', src='../img/test.png')
 		
 
 		div(class='test')
 			form(class='animal' action='/animal', method='post', autocomplete='off')
-				p Which five animals did you see? Fill in the blanks. 
+				p Which five animals did you see? Fill in the blanks. Order doesn't matter.
 					br
 					br
 					h7 1.

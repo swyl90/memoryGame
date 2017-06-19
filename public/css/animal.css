@@ -16,6 +16,14 @@ h2 {
 
 }
 
+h3 {
+	font-family: 'Patrick Hand SC';
+	font-size: 50px;
+	margin-top: 0;
+	margin-left: 10px;
+	float: left;
+}
+
 .home {
 	width: 18%;
 	margin-right: 10px;
