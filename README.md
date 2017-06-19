@@ -7,11 +7,6 @@ After the time is up, you need to name the objects that you saw.
 The more you get right, the higher the score.
 
 ### The story:
-Oh no! Tweety is suffering from memory loss.
-Help him find his way back home.
-Test your memory ability and memorize a set of objects in 10 seconds.
-With each correct answer,Tweety is one step closer to home.
-
 ![schermopname 139](https://user-images.githubusercontent.com/25740926/27291179-d5ed49d2-550f-11e7-96c8-6c1c8581d49a.png)
 ![schermopname 140](https://user-images.githubusercontent.com/25740926/27291182-d5ef8008-550f-11e7-9e9e-afdc078344fd.png)
 ![schermopname 141](https://user-images.githubusercontent.com/25740926/27291183-d5f1476c-550f-11e7-8c2a-8a21cb259dac.png)
