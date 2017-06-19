@@ -18,7 +18,7 @@ var show = function() {
 	$('.hide').fadeIn()
 	$('.test').fadeIn()
 };
-setTimeout(show, 5000)
+setTimeout(show, 10000)
 
 })
 
