@@ -6,6 +6,10 @@ This game tests your ability to memorize a set of objects on a picture in 10 sec
 After the time is up, you need to name the objects that you saw. 
 The more you get right, the higher the score.
 
+Difficulty level:
+Animals: hard (open questions)
+Food: easy (multiple choice)
+
 ### The story:
 ![schermopname 139](https://user-images.githubusercontent.com/25740926/27291179-d5ed49d2-550f-11e7-96c8-6c1c8581d49a.png)
 ![schermopname 140](https://user-images.githubusercontent.com/25740926/27291182-d5ef8008-550f-11e7-9e9e-afdc078344fd.png)
