@@ -21,7 +21,7 @@ Food: easy (multiple choice)
 ![schermopname 146](https://user-images.githubusercontent.com/25740926/27291186-d60c6b46-550f-11e7-9b14-8a883e7a703b.png)
 ![schermopname 147](https://user-images.githubusercontent.com/25740926/27291185-d60c6c22-550f-11e7-9943-7f58ebed2ba3.png)
 
-#The Assignment
+# The Assignment
 
 In groups of two to three, create a web application using the technologies covered so far. Use Git and Github to collaborate. Prior to coding, you must complete a design specification and technical specification, located here.
 
